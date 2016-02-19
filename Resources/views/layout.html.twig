@@ -1,1 +1,16 @@
 {% extends "ASFLayoutBundle::backend_model.html.twig" %}
+
+{% block project_name %}
+	<a class="navbar-brand" href="{{ path('asf_backend_homepage') }}">PES CPanel</a>
+{% endblock %}
+
+{% block navbar_nav %}
+<ul class="nav navbar-nav navbar-right">
+	<li><a href="{{ path('asf_backend_homepage') }}" title="{{ 'Dashboard'|trans }}">{{ 'Dashboard'|trans }}</a></li>
+	<li><a href="#">Settings</a></li>
+	<li><a href="#">Profile</a></li>
+	<li><a href="#">Help</a></li>
+</ul>
+{% endblock %}
+
+{% block content_title %}{{ 'Dashboard'|trans }}{% endblock %}
