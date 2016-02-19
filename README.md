@@ -1,6 +1,6 @@
 # Artscore Studio Backend bundle
 
-Backend Bundle is a Symfony 2+ bundle for create and manage backend in your Symfony 2+ application. This package is a part of Artscore Studio Framework.
+Backend Bundle is a Symfony 2/3 bundle for create and manage backend in your Symfony 2+ application. This package is a part of Artscore Studio Framework.
 
 IMPORTANT NOTICE: This bundle is still under development. Any changes will be done without prior notice to consumers of this package. Of course this code will become stable at a certain point, but for now, use at your own risk.
 
