@@ -7,10 +7,9 @@
 {% endblock %}
 
 {% block navbar_nav %}
-<ul class="nav navbar-nav navbar-right">
-	<li><a href="{{ path('asf_backend_homepage') }}">Dashboard</a></li>
-	<li><a href="#">Settings</a></li>
-	<li><a href="#">Profile</a></li>
-	<li><a href="#">Help</a></li>
-</ul>
+{{ knp_menu_render('navbar_menu', {'style': 'navbar-right'}) }}
+{% endblock %}
+
+{% block sidebar_nav %}
+{{ knp_menu_render('sidebar_menu', {'style': 'stacked-pills'}) }}
 {% endblock %}
