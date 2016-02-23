@@ -73,8 +73,8 @@ class MenuBuilder
 	 */
 	public function createSidebarMenu(array $options)
 	{
-		$menu = $this->factory->createItem('root');
-	
+		$menu = $this->factory->createItem('root', array('childrenAttributes' => array('class' => 'nav-sidebar')));
+		
 		$this->eventDispatcher->dispatch(BackendEvents::SIDEBAR_MENU_INIT, new SidebarMenuEvent($menu, $this->factory));
 	
 		return $menu;
