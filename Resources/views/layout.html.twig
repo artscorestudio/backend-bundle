@@ -1,5 +1,12 @@
 {% extends 'ASFLayoutBundle::backend_model.html.twig' %}
 
+{% block asf_base_header_stylesheets %}
+	{{ parent() }}
+	{% stylesheets '@ASFBackendBundle/Resources/public/css/*' %}
+		<link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+	{% endstylesheets %}
+{% endblock %}
+
 {% block asf_base_meta_title_suffix %}ASF CPanel{% endblock %}
 
 {% block navbar_project %}
@@ -12,4 +19,21 @@
 
 {% block sidebar_nav %}
 {{ knp_menu_render('sidebar_menu', {'style': 'nav'}) }}
+{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+	{% block breadcrumbs_root %}
+	<a href="{{ path('asf_backend_homepage') }}" title="{{ 'Home'|trans }}">{{ 'Home'|trans }}</a>
+	{% endblock %}
+	{% block breadcrumbs_tree %}{% endblock %}
+</div>
+{% endblock %}
+
+{% block asf_cmd %}
+<div class="cmd-actions">
+	<div class="btn-group" role="group">
+	{% block asf_cmd_buttons %}{% endblock %}
+	</div>
+</div>
 {% endblock %}
