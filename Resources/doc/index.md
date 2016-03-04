@@ -2,6 +2,8 @@
 
 Backend Bundle is a Symfony 2/3 bundle for create and manage backend in your Symfony 2/3 application. This package is a part of Artscore Studio Framework.
 
+The goal of this bundle is to embedded a set of backend layouts based on Twitter Bootstrap and jQuery. This bundle is a child bundle of [ASFLayoutBundle](https://packagist.org/packages/artscorestudio/layout-bundle). 
+
 > IMPORTANT NOTICE: This bundle is still under development. Any changes will be done without prior notice to consumers of this package. Of course this code will become stable at a certain point, but for now, use at your own risk.
 
 > BE CARREFUL : This bundle does not include external libraries, you must install the libraries via Compoer, in accordance with best practices of Symfony documentation.
