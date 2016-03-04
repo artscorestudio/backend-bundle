@@ -1,0 +1,2 @@
+asf_backend:
+    resource: "@ASFBackendBundle/Resources/config/routing/routing.yml"
