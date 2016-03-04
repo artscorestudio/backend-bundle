@@ -1,8 +1,8 @@
 # Artscore Studio Backend bundle
 
-Backend Bundle is a Symfony 2/3 bundle for create and manage backend in your Symfony 2+ application. This package is a part of Artscore Studio Framework.
+Backend Bundle is a Symfony 2/3 bundle for create and manage backend in your Symfony 2/3 application. This package is a part of Artscore Studio Framework.
 
-IMPORTANT NOTICE: This bundle is still under development. Any changes will be done without prior notice to consumers of this package. Of course this code will become stable at a certain point, but for now, use at your own risk.
+> IMPORTANT NOTICE: This bundle is still under development. Any changes will be done without prior notice to consumers of this package. Of course this code will become stable at a certain point, but for now, use at your own risk.
 
 [![Build Status](https://travis-ci.org/artscorestudio/backend-bundle.svg?branch=master)](https://travis-ci.org/artscorestudio/backend-bundle)
 
@@ -10,7 +10,7 @@ IMPORTANT NOTICE: This bundle is still under development. Any changes will be do
 
 The bulk of the documentation is stored in the Resources/docs/index.md file in bundle :
 
-[Read the documentation for master](https://github.com/artscorestudio/Backend-bundle/blob/master/Resources/doc/index.md).
+[Read the documentation for master](https://github.com/artscorestudio/backend-bundle/blob/master/Resources/doc/index.md).
 
 
 ## Installation
@@ -46,6 +46,6 @@ Artscore Studio Backend Bundle is an [Artscore Studio](http://www.artscore-studi
 
 ## Reporting an issue or a feature request
 
-Issues and features requests are tracked in the [GitHub issue tracker](https://github.com/artscorestudio/website-bundle/issues).
+Issues and features requests are tracked in the [GitHub issue tracker](https://github.com/artscorestudio/backend-bundle/issues).
 
 When reporting a bug, it may be a good idea to reproduce it in a basic project built using the Symfony Standard Edition to allow developers of the bundle te reproduce the issue by simply cloning it and following steps.

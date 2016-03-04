@@ -1,6 +1,6 @@
 # Artscore Studio Backend Bundle
 
-Backend Bundle is a Symfony 2+ bundle for create and manage backends in your Symfony 2+ application. This package is a part of Artscore Studio Framework.
+Backend Bundle is a Symfony 2/3 bundle for create and manage backend in your Symfony 2/3 application. This package is a part of Artscore Studio Framework.
 
 > IMPORTANT NOTICE: This bundle is still under development. Any changes will be done without prior notice to consumers of this package. Of course this code will become stable at a certain point, but for now, use at your own risk.
 
@@ -9,10 +9,11 @@ Backend Bundle is a Symfony 2+ bundle for create and manage backends in your Sym
 ## Prerequisites
 
 This version of the bundle requires :
-* Symfony 2.0+
-* Assetic bundle 2.7+ (suggest [symfony/assetic-bundle](https://packagist.org/packages/symfony/assetic-bundle))
-* [ASFCoreBundle >= 1](https://github.com/artscorestudio/core-bundle)
-* [ASFLayoutBundle >= 1](https://github.com/artscorestudio/layout-bundle)
+* Symfony >= 2.8 / >= 3+
+* [Assetic bundle >= 2.7](https://packagist.org/packages/symfony/assetic-bundle)
+* [ASFCoreBundle >= 1](https://packagist.org/packages/artscorestudio/core-bundle)
+* [ASFLayoutBundle dev-master](https://packagist.org/packages/artscorestudio/layout-bundle)
+* [KnpMenuBundle >= 2.0](https://packagist.org/packages/knplabs/knp-menu-bundle)
 
 ### Translations
 
@@ -55,9 +56,22 @@ public function registerBundles()
 }
 ```
 
+### Step 3 : Import ASFBackendBundle routing files
+
+Now that you have activated and configured the bundle, all that is left to do is import the ASFBackendBundle routing files.
+
+By importing the routing files you will have ready made pages for things such as backend homepage, etc.
+
+```yaml
+asf_website:
+    resource: "@ASFBackendBundle/Resources/config/routing/routing.yml"
+```
+
 ### Next Steps
 
 Now you have completed the basic installation and configuration of the ASFBackendBundle, you are ready to learn about more advanced features and usages of the bundle.
 
 The following documents are available :
-* [ASFBackendBundle Configuration Reference](configuration.md)
+* [Overriding Default ASFBackendBundle Templates](templates.md)
+* [Overriding Default ASFBackendBundle Controllers](controllers.md)
+* [Add new items in ASFBackendBundle menus](menus.md)
