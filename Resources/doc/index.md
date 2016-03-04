@@ -36,7 +36,7 @@ For more information about translations, check [Symfony documentation](https://s
 Require the bundle with composer :
 
 ```bash
-$ composer require artscorestudio/backend-bundle "1.0.0"
+$ composer require artscorestudio/backend-bundle "dev-master"
 ```
 
 Composer will install the bundle to your project's *vendor/artscorestudio/backend-bundle* directory. It also install dependencies. 
