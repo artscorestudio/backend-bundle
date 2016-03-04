@@ -9,7 +9,7 @@
  */
 namespace ASF\BackendBundle\Controller;
 
-use ASF\CoreBundle\Controller\ASFController;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
  * Default Controller gather generic app views
@@ -17,7 +17,7 @@ use ASF\CoreBundle\Controller\ASFController;
  * @author Nicolas Claverie <info@artscore-studio.fr>
  *
  */
-class DashboardController extends ASFController
+class DashboardController extends Controller
 {
     /**
      * Dashboard Homepage
