@@ -37,10 +37,11 @@ class NavbarMenuEventTest extends \PHPUnit_Framework_TestCase
         $factory = new MenuFactory();
         $menu = new MenuItem('root', $factory);
         
-        $event = new NavbarMenuEvent($menu, $factory);
+        $this->event = new NavbarMenuEvent($menu, $factory);
     }
     
     /**
+     * @covers ASF\BackendBundle\Event\NavbarMenuEvent
      * @covers ASF\BackendBundle\Event\NavbarMenuEvent::getMenu
      */
 	public function testGetMenuMethod()

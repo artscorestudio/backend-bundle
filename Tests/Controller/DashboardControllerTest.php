@@ -10,6 +10,7 @@
 namespace ASF\BackendBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
  * Dashboard Controller Tests
@@ -20,12 +21,11 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 class TestDashboardControllerTest extends WebTestCase
 {
     /**
-     * @covers ASF\BackendBundle\Controller\DashbaordController::indexAction
+     * @covers ASF\BackendBundle\Controller\DashboardController::indexAction
      */
     public function testBackendHomepage()
     {
-        $client = static::createClient();
-        
+        $client = $this->createClient();
         $crawler = $client->request('GET', '/');
         $this->assertGreaterThan(0, $crawler->filter('html:contains("Default Backend template")')->count());
     }

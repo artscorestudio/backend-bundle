@@ -42,6 +42,7 @@ class MenuBuilderTest extends \PHPUnit_Framework_TestCase
     }
     
 	/**
+	 * @covers ASF\BackendBundle\Menu\MenuBuilder
 	 * @covers ASF\BackendBundle\Menu\MenuBuilder::createNavbarMenu
 	 */
 	public function testCreateNavbarMenuMethod()

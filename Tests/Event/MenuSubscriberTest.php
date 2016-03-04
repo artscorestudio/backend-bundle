@@ -11,7 +11,9 @@ namespace ASF\BackendBundle\Tests\Event;
 
 use ASF\BackendBundle\Event\MenuSubscriber;
 use ASF\BackendBundle\Event\NavbarMenuEvent;
+use Knp\Menu\MenuItem;
 use Knp\Menu\MenuFactory;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Backend Menu Subscriber Tests
@@ -45,11 +47,13 @@ class MenuSubscriberTest extends \PHPUnit_Framework_TestCase
         $this->navbarEvent = new NavbarMenuEvent($menu, $factory);
         
         // Menu Subscriber
-        $request = $this->getMock('Symfony\Component\HttpFoundation\Request');
+        $request = $this->getMockBuilder(RequestStack::class)
+            ->disableOriginalConstructor()->getMock();
         $this->subscriber = new MenuSubscriber($request);
     }
     
     /**
+     * @covers ASF\BackendBundle\Event\MenuSubscriber
      * @covers ASF\BackendBundle\Event\MenuSubscriber::getSubscribedEvents
      */
     public function testGetSubscribedEventsMethod()

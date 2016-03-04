@@ -37,10 +37,11 @@ class SidebarMenuEventTest extends \PHPUnit_Framework_TestCase
         $factory = new MenuFactory();
         $menu = new MenuItem('root', $factory);
         
-        $event = new SidebarMenuEvent($menu, $factory);
+        $this->event = new SidebarMenuEvent($menu, $factory);
     }
     
     /**
+     * @covers ASF\BackendBundle\Event\SidebarMenuEvent
      * @covers ASF\BackendBundle\Event\SidebarMenuEvent::getMenu
      */
 	public function testGetMenuMethod()
