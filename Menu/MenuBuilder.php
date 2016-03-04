@@ -2,7 +2,7 @@
 /*
  * This file is part of the Artscore Studio Framework package.
  *
- * (c) 2012-2015 Nicolas Claverie <info@artscore-studio.fr>
+ * (c) Nicolas Claverie <info@artscore-studio.fr>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -16,6 +16,7 @@ use ASF\BackendBundle\Event\BackendEvents;
 use ASF\BackendBundle\Event\NavbarMenuEvent;
 use ASF\BackendBundle\Event\SidebarMenuEvent;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Knp\Menu\ItemInterface;
 
 /**
  * Knp Menu Builder
@@ -56,6 +57,7 @@ class MenuBuilder
 	 * Navbar Menu
 	 * 
 	 * @param array $options
+	 * @return ItemInterface
 	 */
 	public function createNavbarMenu(array $options)
 	{
@@ -70,6 +72,7 @@ class MenuBuilder
 	 * Sidebar Menu
 	 *
 	 * @param array $options
+	 * @return ItemInterface
 	 */
 	public function createSidebarMenu(array $options)
 	{
