@@ -4,7 +4,7 @@ Backend Bundle is a Symfony 2/3 bundle for create and manage backend in your Sym
 
 > IMPORTANT NOTICE: This bundle is still under development. Any changes will be done without prior notice to consumers of this package. Of course this code will become stable at a certain point, but for now, use at your own risk.
 
-[![Build Status](https://travis-ci.org/artscorestudio/backend-bundle.svg?branch=master)](https://travis-ci.org/artscorestudio/backend-bundle)
+[![Build Status](https://travis-ci.org/artscorestudio/backend-bundle.svg?branch=1.0.0)](https://travis-ci.org/artscorestudio/backend-bundle)
 
 ## Documentation
 
