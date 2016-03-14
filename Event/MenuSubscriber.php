@@ -13,6 +13,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Knp\Menu\Matcher\Matcher;
 use Knp\Menu\Matcher\Voter\RouteVoter;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Translation\TranslatorInterface;
 
 /**
  * Backend Menu Subscriber
@@ -28,11 +29,17 @@ class MenuSubscriber implements EventSubscriberInterface
 	protected $request;
 	
 	/**
+	 * @var TranslatorInterface
+	 */
+	protected $translator;
+	
+	/**
 	 * @param RequestStack $request
 	 */
-	public function __construct(RequestStack $request)
+	public function __construct(RequestStack $request, $translator)
 	{
 		$this->request = $request;
+		$this->translator = $translator;
 	}
 	
 	/**
@@ -54,7 +61,7 @@ class MenuSubscriber implements EventSubscriberInterface
 		$factory = $event->getFactory();
 		
 		// Home link
-		$item = $factory->createItem('Home', array('route' => 'asf_backend_homepage'));
+		$item = $factory->createItem($this->translator->trans('Home', array(), 'asf_backend'), array('route' => 'asf_backend_homepage'));
 		$menu->addChild($item);
 		
 		$matcher = new Matcher();
