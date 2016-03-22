@@ -48,7 +48,8 @@ class MenuSubscriberTest extends \PHPUnit_Framework_TestCase
         // Menu Subscriber
         $request = $this->getMockBuilder('Symfony\Component\HttpFoundation\RequestStack')
             ->disableOriginalConstructor()->getMock();
-        $this->subscriber = new MenuSubscriber($request);
+        $translator = $this->getMockBuilder('Symfony\Component\Translation\Translator')->disableOriginalConstructor()->getMock();
+        $this->subscriber = new MenuSubscriber($request, $translator);
     }
     
     /**
